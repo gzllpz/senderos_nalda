@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head lang="es">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Senderos Nalda</title>
+    <style>
+      body, html{
+        height: 100%;
+        border: 0;
+        padding: 0;
+        margin: 0;
+      }
+      #map{
+        width: 100%;
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+  </body>
+  <script>
+    var iderioja_config = {
+      "init_lat": 42.3150,
+      "init_lng": -2.4771,
+      "capa_geojson": [
+        {"url": "https://raw.githubusercontent.com/gzllpz/senderos_nalda/master/parcelas_nalda.geojson",
+         "estilo": {
+            "color": "#00FF00",
+            "weight": 3
+         }
+        },
+        {"url": "https://raw.githubusercontent.com/gzllpz/senderos_nalda/master/parcelas_viguera.geojson",
+         "estilo": {
+            "color": "#00FF00",
+            "weight": 3
+         }
+        },
+        {"url": "https://raw.githubusercontent.com/gzllpz/senderos_nalda/master/senderos.geojson",
+         "estilo": {
+            "color": "#ffff34",
+            "weight": 4
+         }
+        }
+      ],
+      "localizacion": 1,
+      "popup": 2,
+      "fondo_base": "iderioja-ortofoto"
+    }
+  </script>
+  <script src="https://apigeo.larioja.org/v1/iderioja.js"></script>
+</html>
